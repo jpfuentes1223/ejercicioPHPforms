@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <a href="index.html"><button type="button">Volver atras</button></a>
+        <div class="container_form">
+            <form action="create_user.php" method="post">
+                <h2>Crear usuario</h2>
+                <label>Nombre de usuario</label>
+                <br/>
+                <input type="text" id="user_name" name="user_name" placeholder="nombre de usuario" required="required">
+                <br/>
+                <label>Apellido</label>
+                <br/>
+                <input type="text" id="sur_name" name="sur_name" placeholder="apellido" required="required">
+                <br/>
+                <label>Nickname</label>
+                <br/>
+                <input type="text" id="nick_name" name="nick_name" placeholder="Nickname" required="required">
+                <br/>
+                <label>Contraseña</label>
+                <br/>
+                <input type="password" id="password" name="password" placeholder="password" required="required">
+                <br/>
+                <input type="submit" id="submit_user" value="Enviar">
+            </form>
+        </div>
+        <br/>
+        <div class="container_form">
+            <h2>Buscar Quest por Id</h2>
+            <label>ID de quest</label>
+            <br/>
+            <input type="text" id="quest_id" placeholder="ID de quest">
+            <br/>
+            <button type="button" id="button_quests" class="button">Buscar</button>
+
+        </div>
+        <br/>
+        <div class="container_form">
+            <h2>Actualizar usuario por ID</h2>
+            <label>ID de usuario</label>
+            <br/>
+            <input type="text" id="user_id"  placeholder="ID de usuario">
+            <br/>
+            <label>Score nuevo</label>
+            <br/>
+            <input type="text" id="score_num"  placeholder="Score">
+            <br/>
+            <button type="button" id="button_users" class="button">Actualizar</button>
+
+        </div>
+
+        <script>
+            document.getElementById("button_quests").addEventListener("click", loadWindowQuests);
+            document.getElementById("button_users").addEventListener("click", loadWindowUserUpdate);
+            function loadWindowQuests() {
+                var id = document.getElementById("quest_id").value;
+                window.location = "http://localhost/ejercicioPHP/search_quest.php?id=" + id;
+            }
+            function loadWindowUserUpdate() {
+                var id = document.getElementById("user_id").value;
+                var score = document.getElementById("score_num").value;
+                window.location = "http://localhost/ejercicioPHP/update_user.php?id=" + id + "&score=" + score;
+            }
+        </script>
+    </body>
+</html>

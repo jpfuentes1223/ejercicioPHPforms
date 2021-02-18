@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class = "container_form">
+
+            <a href="misiones.php">
+                <button type="button" id="misiones"  class="button">Mostrar misiones</button>
+            </a>
+            <a href="usuarios.php">
+                <button type="button" id="usuarios" class="button">Mostrar usuarios</button>
+            </a>
+            <a href="score_gt.php">
+                <button type="button" id="usuarios_score" class="button">Mostrar usuarios con score > 0</button>
+            </a>
+            <input type="text" id="usuario_id" placeholder="ID de usuario a buscar">
+            <button type="button" id="usuarios_button" class="button">Mostrar usuarios con ID especifico</button>
+
+            <a href="forms.html"><button type="button" id="forms_button" class="button">Formularios</button></a>
+        </div>
+
+        <script>
+            document.getElementById("usuarios_button").addEventListener("click", loadWindowID);
+
+            function loadWindowID() {
+                var id = document.getElementById("usuario_id").value;
+                window.location = "http://localhost/ejercicioPHP/usuarios_id.php?id=" + id;
+            }
+        </script>
+    </body>
+</html>

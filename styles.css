@@ -1,0 +1,44 @@
+.button{
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    background-color: grey;
+    border: solid black 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: lightgray;
+    cursor: pointer;
+    
+}
+.container_form{
+    width: 25%;
+    text-align: center;
+    background-color: rgb(200,200,200);
+    border: solid black 3px;
+    border-radius: 20px;
+    padding: 1%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+#misiones{
+    background-color: rgb(150,150,150);
+}
+#usuarios{
+    background-color: rgb(100,100,100);
+    
+}
+#usuarios_score{
+    background-color: rgb(50,50,50);
+    
+}
+#usuarios_button{
+    background-color: rgb(10,10,10);
+    
+}
+#usuario_id{
+    margin-top: 3%;
+    margin-left: 1%;
+}
